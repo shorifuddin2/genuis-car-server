@@ -9,6 +9,8 @@ heroku login
 --------------------
 for each project one
 -----------------------
-heroku create
+heroku create 
+make sure you:git add commit push
+
 
 */
