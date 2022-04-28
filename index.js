@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const req = require('express/lib/request');
 require('dotenv').config();
 const port = process.env.PORT || 5000;
 
@@ -19,6 +21,13 @@ async function run() {
     try {
         await client.connect();
         const serviceCollection = client.db('geniusCar').collection('service');
+
+
+        //auth 
+        app.get('/login', async (req,res)=>{
+
+        })
+
 
         app.get('/service', async (req, res) => {
             const query = {};
